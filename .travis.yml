@@ -1,0 +1,3 @@
+language: minimal
+after_success:
+  "curl -T index.html -u $FTP_USER:$FTP_PASSWORD ftp://102345.w45.wedos.net/domains/deboraaondrej.ludova-hudba.eu"
