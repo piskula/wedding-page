@@ -79,10 +79,26 @@ input[type="button"] {
     border-radius: 1rem;
 }
 
+.footer {
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: var(--color-accent-secondary);
+    color: white;
+    text-align: center;
+    padding: .5rem 0;
+}
+
 /* ---- Custom styles: ----*/
 
 .mb-15 {
     margin-bottom: 3rem;
+}
+.f-125 {
+    font-size: 1.25rem;
+}
+.f-175 {
+    font-size: 1.75rem;
 }
 
 .introduction-photo {
