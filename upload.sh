@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 set -e
 
-REMOTEPATH='/www/domains/deboraaondrej.ludova-hudba.eu/'
+REMOTEPATH='/www/domains/deboraaondrej.sk/'
 
 lftp -f "
 set dns:order "inet"
