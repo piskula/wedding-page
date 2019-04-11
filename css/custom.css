@@ -18,10 +18,23 @@ h2 {
     font-weight: 700;
     text-transform: uppercase;
 }
+h3 {
+    padding-top: 1rem;
+}
 
 .section {
-    padding: 5rem 0 7rem;
+    padding: 5rem 0 2rem;
     text-align: center;
+}
+@media (min-width: 550px) {
+    .section {
+        padding: 5rem 0 2rem;
+    }
+}
+@media (min-width: 1000px) {
+    .section {
+        padding: 3rem 0 3rem;
+    }
 }
 .section-heading,
 .section-description {
@@ -68,24 +81,32 @@ input[type="button"] {
 
 /* ---- Custom styles: ----*/
 
+.mb-15 {
+    margin-bottom: 3rem;
+}
+
 .introduction-photo {
     position: relative;
+}
+
+.introduction {
+    padding: 7rem 0 2rem;
 }
 .introduction-photo > img {
     max-width: 90%;
     position: relative;
-    margin: 1rem auto -7rem;
+    margin: -1rem auto 1rem;
 }
 
 @media (min-width: 550px) {
     .introduction {
-        padding: 0 0 12rem;
+        padding: 9rem 0 7rem;
     }
     .introduction-photo > img {
         max-height: 48rem;
         position: absolute;
-        top: -15rem;
-        right: 5rem;
+        top: -6rem;
+        right: 2rem;
     }
 }
 /* @media (min-width: 750px) {
@@ -98,24 +119,20 @@ input[type="button"] {
     .introduction-photo > img {
         max-height: 48rem;
         position: absolute;
-        top: -15rem;
+        top: -13rem;
         right: 5rem;
     }
 }
-
 
 .places {
     background-color: var(--color-background-secondary);
     background-size: cover;
     color: #ffffff;
-    padding-bottom: 5rem;
-    /*padding-top: 1rem;*/
 }
 .places-title {
     color: var(--color-accent-primary);
     text-transform: uppercase;
     margin-bottom: 0;
-    margin-top: 1rem;
 }
 .places-subtitle {
     margin-bottom: 1rem;
