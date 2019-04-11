@@ -1,6 +1,20 @@
 language: minimal
+sudo: false
+addons:
+  apt:
+    packages:
+    - lftp
+
+before_script:
+  - chmod +x upload.sh
+
 after_success:
-  - find * -type f -print -exec curl -T {} ftp://102345.w45.wedos.net/www/domains/deboraaondrej.ludova-hudba.eu/{} -u $FTP_USER:$FTP_PASSWORD \;
+  - rm -r --interactive=never -f .idea
+  - rm -r --interactive=never -f .git
+  - rm -r --interactive=never -f Readme.md
+  - rm -r --interactive=never -f .gitignore
+  - ./upload.sh
+
 branches:
   only:
   - master
