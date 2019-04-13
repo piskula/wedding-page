@@ -36,7 +36,7 @@
 
   <div id="cookie-popup">
     <div class="row">
-      <span class="inline mr-5">Táto stránka nepoužíva cookies.</span>
+      <span class="inline mr-5 f-175">Táto stránka nepoužíva cookies.</span>
       <p class="inline">
         <span>
           <a class="button button-small" onclick="closeCookiePopup()">Nevadí</a>
@@ -107,7 +107,6 @@
           predsvadobný účet:
         </p>
         <a class="button button-primary">Transparentný účet</a>
-        <a class="button">účet</a>
 
       </div>
     </div>
@@ -123,17 +122,32 @@
   </div>
 
   <script type="text/javascript">
+    POPUP = document.getElementById('cookie-popup');
+
+    checkHeightOfCookiePopup = function () {
+        return POPUP.offsetHeight + "px";
+    };
+
+    if (document.cookie) {
+        POPUP.style.display = "none";
+    } else {
+        POPUP.style.top = "-10rem";
+        POPUP.style.top = "-" + checkHeightOfCookiePopup();
+        setTimeout(function () {
+            POPUP.style.top = "0";
+        }, 2000);
+    }
 
     closeCookiePopup = function() {
         var d = new Date();
         d.setTime(d.getTime() + (7 *24*60*60*1000));
         document.cookie = "test=value;expires=" + d.toUTCString() + ";path=/";
-        document.getElementById('cookie-popup').style.display = "none";
-    };
 
-    if (document.cookie) {
-        document.getElementById('cookie-popup').style.display = "none";
-    }
+        POPUP.style.top = "-" + checkHeightOfCookiePopup();
+        setTimeout(function () {
+            POPUP.style.display = "none";
+        }, 2000);
+    };
   </script>
 
 </body>

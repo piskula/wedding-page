@@ -52,8 +52,8 @@ button,
 input[type="submit"],
 input[type="reset"],
 input[type="button"] {
-    border: 1px solid #555;
-    color: #555;
+    border: 1px solid #fff;
+    color: #fff;
 }
 .button:hover,
 button:hover,
@@ -65,8 +65,8 @@ button:focus,
 input[type="submit"]:focus,
 input[type="reset"]:focus,
 input[type="button"]:focus {
-    border: 1px solid #222;
-    color: #222;
+    border: 1px solid var(--color-background-primary);
+    color: var(--color-background-primary);
 }
 .button.button-primary,
 button.button-primary,
@@ -193,10 +193,12 @@ input[type="button"] {
 #cookie-popup {
     text-align: center;
     padding-top: 2rem;
-    background-color: #33C3F0;
+    background-color: #2d89ef;
+    color: #fff;
     position: fixed;
     top: 0;
     right: 0;
     left: 0;
     z-index: 1;
+    transition: top 1s ease 0s;
 }
