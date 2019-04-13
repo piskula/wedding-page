@@ -79,7 +79,7 @@
         <div class="one-third column value">
           <h3 class="places-title">Hostina</h3>
           <h5 class="places-subtitle">Bude aj D.I.S.C.O.?</h5>
-          <p>Pravdaže. Hostina sa bude konať v&nbspkaštieli <span class="accent">v&nbspOponiciach pri Nitre</span>, kde sa možno aj skromne a bez&nbspalkoholu zabavíme.</p>
+          <p>Pravdaže. Hostina sa bude konať v&nbspkaštieli <span class="accent">v&nbspOponiciach pri&nbspNitre</span>, kde sa možno aj skromne a bez&nbspalkoholu zabavíme.</p>
           <a class="button button-primary" href="https://www.chateauappony.sk/">Miesto</a>
           <a class="button button-primary mb-15" href="https://www.google.com/maps/dir/?api=1&destination=Chateau+Appony&destination_place_id=ChIJMWf0Vz02a0cRoGsJWMrsCtw&travelmode=driving">Trasa</a>
         </div>
@@ -99,15 +99,52 @@
     <div class="container">
       <div class="row">
 
-        <h3>Chcem Vám niečo kúpit'  </h3>
+        <h3>Chcem Vám niečo kúpit'</h3>
         <p>
-          Ou šit. Nie, neprosíme si. Obaja sme veľmi ekologicky založený a snažíme sa žiť bez odpadkov. Avšak
-          peňažné dary môžete poukázať na číslo účtu <span class="accent nowrap">SK25 1111 0000 0011 3922 1013</span>.
-          Nezabudnite uviesť svoje identifikačné údaje. Tu taktiež nájdete aj náš transparentný <del>predvolebný</del>
-          predsvadobný účet:
+          Veľmi si to vážime, ale <span class="accent">nie</span>, neprosíme si. Obaja sme veľmi nároční a najradšej
+          si všetko kupujeme sami. Prosíme, <span class="accent">nenoste nám ani žiadne kvety</span>. Ale peňažné dary
+          môžete poukázať na číslo účtu <span class="accent nowrap">SK25 1111 0000 0011 3922 1013</span>. Nezabudnite
+          uviesť svoje identifikačné údaje. Tu taktiež nájdete aj náš transparentný <del>predvolebný</del> predsvadobný účet:
         </p>
-        <a class="button button-primary">Transparentný účet</a>
+        <a class="button button-primary" onclick="toggleAccountTable()">Transparentný účet</a>
 
+        <div id="account-table" class="account-table-wrapper">
+          <table>
+            <thead>
+            <tr>
+              <th class="date">Dátum</th>
+              <th>Kto</th>
+              <th class="amount">Suma</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+              <td class="text-right">13.4.2019</td>
+              <td class="content">Braňo Mojsej - niečo od nás z Pereša</td>
+              <td class="text-right accent-green">+&nbsp2.000&nbspEUR</td>
+            </tr>
+            <tr>
+              <td class="text-right">18.2.2019</td>
+              <td class="content">Ondrej Oravčok - skúška svadobného účesu</td>
+              <td class="text-right accent">-&nbsp700&nbspEUR</td>
+            </tr>
+            <tr>
+              <td class="text-right">10.2.2019</td>
+              <td class="content">Debora Trebulová - vrecúška AliExpres</td>
+              <td class="text-right accent">-&nbsp20&nbspEUR</td>
+            </tr>
+            </tbody>
+          </table>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="container">
+      <div class="row">
+        <h3>Feferónky pre Deborku</h3>
       </div>
     </div>
   </div>
@@ -123,6 +160,7 @@
 
   <script type="text/javascript">
     POPUP = document.getElementById('cookie-popup');
+    ACCOUNT_TABLE = document.getElementById('account-table');
 
     checkHeightOfCookiePopup = function () {
         return POPUP.offsetHeight + "px";
@@ -148,6 +186,14 @@
             POPUP.style.display = "none";
         }, 2000);
     };
+
+    toggleAccountTable = function () {
+        if (!ACCOUNT_TABLE.style.maxHeight) {
+            ACCOUNT_TABLE.style.maxHeight = "15rem";
+        } else {
+            ACCOUNT_TABLE.style.maxHeight = "";
+        }
+    }
   </script>
 
 </body>

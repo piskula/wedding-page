@@ -44,6 +44,9 @@ h3 {
 .accent {
     color: var(--color-accent-secondary);
 }
+.accent-green {
+    color: #086623;
+}
 .nowrap {
     white-space: nowrap;
 }
@@ -118,6 +121,28 @@ input[type="button"] {
     padding: .5rem 0;
 }
 
+table {
+    width: 100%;
+    table-layout: fixed;
+    margin: auto;
+    max-width: 70rem;
+}
+th, td {
+    padding: 5px 8px;
+    border-bottom-color: #bbb;
+}
+.date {
+    width: 5rem;
+}
+.amount {
+    width: 8rem;
+}
+.content {
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
 /* ---- Custom styles: ----*/
 
 .mb-15 {
@@ -131,6 +156,9 @@ input[type="button"] {
 }
 .f-175 {
     font-size: 1.75rem;
+}
+.text-right {
+    text-align: right;
 }
 
 .introduction-photo {
@@ -201,4 +229,10 @@ input[type="button"] {
     left: 0;
     z-index: 1;
     transition: top 1s ease 0s;
+}
+
+.account-table-wrapper {
+    overflow-y: hidden;
+    max-height: 0;
+    transition: max-height .4s linear 0s;
 }
