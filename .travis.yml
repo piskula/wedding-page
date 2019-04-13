@@ -8,6 +8,17 @@ addons:
 before_script:
   - chmod +x upload.sh
 
+script:
+  - CUSTOM_SUM=css/custom-`md5sum css/custom.css | awk '{ print $1 }'`.css
+  - SKELETON_SUM=css/custom-`md5sum css/skeleton.css | awk '{ print $1 }'`.css
+  - NORMALIZE_SUM=css/custom-`md5sum css/normalize.css | awk '{ print $1 }'`.css
+  - sed -i "s~css\/custom.css~${CUSTOM_SUM}~" index.html
+  - sed -i "s~css\/skeleton.css~${SKELETON_SUM}~" index.html
+  - sed -i "s~css\/normalize.css~${NORMALIZE_SUM}~" index.html
+  - mv css/custom.css $CUSTOM_SUM
+  - mv css/skeleton.css $SKELETON_SUM
+  - mv css/normalize.css $NORMALIZE_SUM
+
 after_success:
   - rm -r --interactive=never -f .idea
   - rm -r --interactive=never -f .git
