@@ -47,7 +47,27 @@ h3 {
 .nowrap {
     white-space: nowrap;
 }
-
+.button,
+button,
+input[type="submit"],
+input[type="reset"],
+input[type="button"] {
+    border: 1px solid #555;
+    color: #555;
+}
+.button:hover,
+button:hover,
+input[type="submit"]:hover,
+input[type="reset"]:hover,
+input[type="button"]:hover,
+.button:focus,
+button:focus,
+input[type="submit"]:focus,
+input[type="reset"]:focus,
+input[type="button"]:focus {
+    border: 1px solid #222;
+    color: #222;
+}
 .button.button-primary,
 button.button-primary,
 input[type="submit"].button-primary,
@@ -79,6 +99,15 @@ input[type="button"] {
     border-radius: 1rem;
 }
 
+.button-small {
+    line-height: 2.5rem;
+    height: 2.5rem;
+    font-size: 1.125rem;
+    padding: 0 1rem;
+    border-radius: .75rem;
+    margin-bottom: .5rem;
+}
+
 .footer {
     left: 0;
     bottom: 0;
@@ -93,6 +122,9 @@ input[type="button"] {
 
 .mb-15 {
     margin-bottom: 3rem;
+}
+.mr-5 {
+    margin-right: 1rem;
 }
 .f-125 {
     font-size: 1.25rem;
@@ -152,4 +184,19 @@ input[type="button"] {
 }
 .places-subtitle {
     margin-bottom: 1rem;
+}
+
+.inline {
+    display: inline-block;
+}
+
+#cookie-popup {
+    text-align: center;
+    padding-top: 2rem;
+    background-color: #33C3F0;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 1;
 }

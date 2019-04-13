@@ -34,6 +34,18 @@
 </head>
 <body>
 
+  <div id="cookie-popup">
+    <div class="row">
+      <span class="inline mr-5">Táto stránka nepoužíva cookies.</span>
+      <p class="inline">
+        <span>
+          <a class="button button-small" onclick="closeCookiePopup()">Nevadí</a>
+          <a class="button button-primary button-small" onclick="closeCookiePopup()">Dúfam že na svadbe budú</a>
+        </span>
+      </p>
+    </div>
+  </div>
+
   <!-- Primary Page Layout
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <div class="section introduction">
@@ -95,18 +107,34 @@
           predsvadobný účet:
         </p>
         <a class="button button-primary">Transparentný účet</a>
+        <a class="button">účet</a>
 
       </div>
     </div>
   </div>
 
-<!-- End Document
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-<div class="footer">
-  <div class="f-175">Debora a Ondrej &copy;
-    <script type="text/javascript">document.write(new Date().getFullYear());</script></div>
-  <div class="f-125">Tento projekt vznikol bez podpory Európskej únie</div>
-</div>
+  <!-- End Document
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <div class="footer">
+    <div class="f-175">Debora a Ondrej &copy;
+      <script type="text/javascript">document.write(new Date().getFullYear());</script>
+    </div>
+    <div class="f-125">Tento projekt vznikol bez podpory Európskej únie</div>
+  </div>
+
+  <script type="text/javascript">
+
+    closeCookiePopup = function() {
+        var d = new Date();
+        d.setTime(d.getTime() + (7 *24*60*60*1000));
+        document.cookie = "test=value;expires=" + d.toUTCString() + ";path=/";
+        document.getElementById('cookie-popup').style.display = "none";
+    };
+
+    if (document.cookie) {
+        document.getElementById('cookie-popup').style.display = "none";
+    }
+  </script>
 
 </body>
 </html>
