@@ -143,6 +143,21 @@ th, td {
     overflow: hidden;
 }
 
+.small-table {
+    display: table-row;
+}
+.small-table .text-right {
+    padding-bottom: 0;
+    border-bottom: none;
+}
+.small-table .content {
+    padding-top: 0;
+    padding-left: .5rem;
+}
+.big-table {
+    display: none;
+}
+
 /* ---- Custom styles: ----*/
 
 .mb-15 {
@@ -198,6 +213,12 @@ th, td {
         top: -13rem;
         right: 5rem;
     }
+    .small-table {
+        display: none;
+    }
+    .big-table {
+        display: table-row;
+    }
 }
 
 .places {
@@ -234,5 +255,5 @@ th, td {
 .account-table-wrapper {
     overflow-y: hidden;
     max-height: 0;
-    transition: max-height .4s linear 0s;
+    transition: max-height .5s linear 0s;
 }

@@ -17,9 +17,8 @@
   <!-- FONT
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <link href="//fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css">
-  <style>
-    @import url('https://fonts.googleapis.com/css?family=Cuprum');
-  </style>
+  <style>@import url('https://fonts.googleapis.com/css?family=Cuprum');</style>
+  <script type="text/javascript" src="https://ajax.microsoft.com/ajax/jQuery/jquery-1.4.2.min.js"></script>
 
   <!-- CSS
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
@@ -118,21 +117,127 @@
             </tr>
             </thead>
             <tbody>
-            <tr>
+
+            <!--1. line-->
+            <tr onclick="toggleAccountRow(this)" class="big-table">
               <td class="text-right">13.4.2019</td>
-              <td class="content">Braňo Mojsej - niečo od nás z Pereša</td>
-              <td class="text-right accent-green">+&nbsp2.000&nbspEUR</td>
+              <td class="content">Sajfa, Ja som funrádio - malý príspevok na tvoj nový Samsung, aby si po svadbe mala konečne funkčný telefón a mohla pozerať moje vlogy.</td>
+              <td class="text-right accent-green">+&nbsp400&nbspEUR</td>
             </tr>
-            <tr>
-              <td class="text-right">18.2.2019</td>
+
+            <tr class="small-table">
+              <td class="text-right">13.4.2019</td>
+              <td class="text-right accent-green" colspan="2">+&nbsp400&nbspEUR</td>
+            </tr>
+            <tr onclick="toggleAccountRow(this)" class="small-table">
+              <td class="content" colspan="3">Sajfa, Ja som funrádio - malý príspevok na tvoj nový Samsung, aby si po svadbe mala konečne funkčný telefón a mohla pozerať moje vlogy.</td>
+            </tr>
+
+            <!--2. line-->
+            <tr onclick="toggleAccountRow(this)" class="big-table">
+              <td class="text-right">11.4.2019</td>
+              <td class="content">Ondrej Oravčok - vrátenie svadobného daru.</td>
+              <td class="text-right accent">-&nbsp17.000&nbspEUR</td>
+            </tr>
+
+            <tr class="small-table">
+              <td class="text-right">11.4.2019</td>
+              <td class="text-right accent" colspan="2">-&nbsp17.000&nbspEUR</td>
+            </tr>
+            <tr onclick="toggleAccountRow(this)" class="small-table">
+              <td class="content" colspan="3">Ondrej Oravčok - vrátenie svadobného daru.</td>
+            </tr>
+
+            <!--3. line-->
+            <tr onclick="toggleAccountRow(this)" class="big-table">
+              <td class="text-right">10.4.2019</td>
+              <td class="content">&hearts; Charles Leclerc, Ferrari - Wish you all the best Debora. Hope I will see you <del>both</del> back in Monaco! &hearts;</td>
+              <td class="text-right accent-green">+&nbsp17.000&nbspEUR</td>
+            </tr>
+
+            <tr class="small-table">
+              <td class="text-right">10.4.2019</td>
+              <td class="text-right accent-green" colspan="2">+&nbsp17.000&nbspEUR</td>
+            </tr>
+            <tr onclick="toggleAccountRow(this)" class="small-table">
+              <td class="content" colspan="3">&hearts; Charles Leclerc, Ferrari - Wish you all the best Debora. Hope I will see you <del>both</del> back in Monaco! &hearts;</td>
+            </tr>
+
+            <!--4. line-->
+            <tr onclick="toggleAccountRow(this)" class="big-table">
+              <td class="text-right">7.4.2019</td>
               <td class="content">Ondrej Oravčok - skúška svadobného účesu</td>
               <td class="text-right accent">-&nbsp700&nbspEUR</td>
             </tr>
-            <tr>
+
+            <tr class="small-table">
+              <td class="text-right">7.4.2019</td>
+              <td class="text-right accent" colspan="2">-&nbsp700&nbspEUR</td>
+            </tr>
+            <tr onclick="toggleAccountRow(this)" class="small-table">
+              <td class="content" colspan="3">Ondrej Oravčok - skúška svadobného účesu</td>
+            </tr>
+
+            <!--5. line-->
+            <tr onclick="toggleAccountRow(this)" class="big-table">
+              <td class="text-right">22.3.2019</td>
+              <td class="content">Popolnočný tajný host' pre Deboru od Ondra: Michal David zaspieva naživo Céčka</td>
+              <td class="text-right accent">-&nbsp12.000&nbspEUR</td>
+            </tr>
+
+            <tr class="small-table">
+              <td class="text-right">22.3.2019</td>
+              <td class="text-right accent" colspan="2">-&nbsp12.000&nbspEUR</td>
+            </tr>
+            <tr onclick="toggleAccountRow(this)" class="small-table">
+              <td class="content" colspan="3">Popolnočný tajný host' pre Deboru od Ondra: Michal David zaspieva naživo Céčka</td>
+            </tr>
+
+            <!--6. line-->
+            <tr onclick="toggleAccountRow(this)" class="big-table">
+              <td class="text-right">8.3.2019</td>
+              <td class="content">Brano Mojsej - niečo z&nbspPereša pre Ondríka. Nech sa Vám darí, Váš Branko</td>
+              <td class="text-right accent-green">+&nbsp2.000&nbspEUR</td>
+            </tr>
+
+            <tr class="small-table">
+              <td class="text-right">8.3.2019</td>
+              <td class="text-right accent-green" colspan="2">+&nbsp2.000&nbspEUR</td>
+            </tr>
+            <tr onclick="toggleAccountRow(this)" class="small-table">
+              <td class="content" colspan="3">Brano Mojsej - niečo z&nbspPereša pre Ondríka. Nech sa Vám darí, Váš Branko</td>
+            </tr>
+
+            <!--7.line-->
+            <tr onclick="toggleAccountRow(this)" class="big-table">
               <td class="text-right">10.2.2019</td>
               <td class="content">Debora Trebulová - vrecúška AliExpres</td>
               <td class="text-right accent">-&nbsp20&nbspEUR</td>
             </tr>
+
+            <tr class="small-table">
+              <td class="text-right">10.2.2019</td>
+              <td class="text-right accent" colspan="2">-&nbsp20&nbspEUR</td>
+            </tr>
+            <tr onclick="toggleAccountRow(this)" class="small-table">
+              <td class="content" colspan="3">Debora Trebulová - vrecúška AliExpres</td>
+            </tr>
+
+            <!--8.line-->
+            <tr onclick="toggleAccountRow(this)" class="big-table">
+              <td class="text-right">21.12.2018</td>
+              <td class="content">Ondrej Oravčok - vklad: všetky moje životné úspory</td>
+              <td class="text-right accent-green">+&nbsp2.000&nbspEUR</td>
+            </tr>
+
+            <tr class="small-table">
+              <td class="text-right">21.12.2018</td>
+              <td class="text-right accent-green" colspan="2">+&nbsp2.000&nbspEUR</td>
+            </tr>
+            <tr onclick="toggleAccountRow(this)" class="small-table">
+              <td class="content" colspan="3">Ondrej Oravčok - vklad: všetky moje životné úspory</td>
+            </tr>
+
             </tbody>
           </table>
         </div>
@@ -159,8 +264,8 @@
   </div>
 
   <script type="text/javascript">
-    POPUP = document.getElementById('cookie-popup');
-    ACCOUNT_TABLE = document.getElementById('account-table');
+    const POPUP = document.getElementById('cookie-popup');
+    const ACCOUNT_TABLE = document.getElementById('account-table');
 
     checkHeightOfCookiePopup = function () {
         return POPUP.offsetHeight + "px";
@@ -177,7 +282,7 @@
     }
 
     closeCookiePopup = function() {
-        var d = new Date();
+        const d = new Date();
         d.setTime(d.getTime() + (7 *24*60*60*1000));
         document.cookie = "test=value;expires=" + d.toUTCString() + ";path=/";
 
@@ -189,11 +294,17 @@
 
     toggleAccountTable = function () {
         if (!ACCOUNT_TABLE.style.maxHeight) {
-            ACCOUNT_TABLE.style.maxHeight = "15rem";
+            ACCOUNT_TABLE.style.maxHeight = "70rem";
         } else {
             ACCOUNT_TABLE.style.maxHeight = "";
         }
-    }
+    };
+
+    toggleAccountRow = function (elem) {
+        const ROW = $(elem).find('.content');
+        const value = ROW.css("white-space");
+        ROW.css("white-space", value === "nowrap" ? "unset" : "nowrap");
+    };
   </script>
 
 </body>
