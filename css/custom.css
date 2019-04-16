@@ -245,11 +245,10 @@ th, td {
     background-color: #2d89ef;
     color: #fff;
     position: fixed;
-    top: 0;
+    top: -10rem;
     right: 0;
     left: 0;
     z-index: 1;
-    transition: top 1s ease 0s;
 }
 
 .account-table-wrapper {
