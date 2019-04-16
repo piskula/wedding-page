@@ -10,8 +10,8 @@ before_script:
 
 script:
   - CUSTOM_SUM=css/custom-`md5sum css/custom.css | awk '{ print $1 }'`.css
-  - SKELETON_SUM=css/custom-`md5sum css/skeleton.css | awk '{ print $1 }'`.css
-  - NORMALIZE_SUM=css/custom-`md5sum css/normalize.css | awk '{ print $1 }'`.css
+  - SKELETON_SUM=css/skeleton-`md5sum css/skeleton.css | awk '{ print $1 }'`.css
+  - NORMALIZE_SUM=css/normalize-`md5sum css/normalize.css | awk '{ print $1 }'`.css
   - sed -i "s~css\/custom.css~${CUSTOM_SUM}~" index.html
   - sed -i "s~css\/skeleton.css~${SKELETON_SUM}~" index.html
   - sed -i "s~css\/normalize.css~${NORMALIZE_SUM}~" index.html
