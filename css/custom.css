@@ -166,11 +166,17 @@ th, td {
 .mr-5 {
     margin-right: 1rem;
 }
+.ml-5 {
+    margin-left: 1rem;
+}
 .f-125 {
     font-size: 1.25rem;
 }
 .f-175 {
     font-size: 1.75rem;
+}
+.f-300 {
+    font-size: 3rem;
 }
 .text-right {
     text-align: right;
@@ -184,7 +190,7 @@ th, td {
 }
 
 .introduction {
-    padding: 7rem 0 2rem;
+    padding: 9rem 0 2rem;
 }
 .introduction-photo > img {
     max-width: 90%;
@@ -305,7 +311,7 @@ th, td {
     .right-arrow > img,
     .left-arrow > img {
         max-height: 40%;
-        height: 8rem;
+        height: 7rem;
     }
     .timeline > .one-half.column {
         flex: 1;
@@ -332,10 +338,10 @@ th, td {
     #first-timeline-arrow {
         background: none;
         position: absolute;
-        bottom: -8rem;
-        height: 8rem;
-        max-height: 8rem;
-        left: -11%;
+        bottom: -7rem;
+        height: 7rem;
+        max-height: 7rem;
+        left: -12%;
         transform: rotate(180deg);
     }
 }
@@ -350,4 +356,58 @@ th, td {
         height: 13rem;
         max-height: 13rem;
     }
+}
+
+.flip-box {
+    display: inline-block;
+    position: relative;
+    background-color: transparent;
+    max-width: 90%;
+}
+
+.flip-box-inner {
+    position: relative;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+}
+
+@media (hover: hover) {
+    .flip-box:hover .flip-box-inner {
+        transform: rotateY(180deg);
+    }
+}
+
+.flip-box.hover .flip-box-inner {
+    transform: rotateY(180deg);
+}
+
+.flip-box-front,
+.flip-box-back {
+    backface-visibility: hidden;
+}
+.flip-box-front {
+    padding: .75rem;
+    background-color: white;
+}
+
+.flip-box-front > img {
+    width: 100%;
+    display: block;
+}
+
+.flip-box-back {
+    width: 100%;
+    height: 100%;
+    background-color: var(--color-accent-secondary);
+    color: #ffffff;
+    position: absolute;
+    top: 0;
+    transform: rotateY(180deg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.flip-box-back-color {
+    color: var(--color-background-secondary);
 }
