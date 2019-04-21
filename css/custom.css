@@ -411,3 +411,32 @@ th, td {
 .flip-box-back-color {
     color: var(--color-background-secondary);
 }
+
+.avatar {
+    border-radius: 50%;
+    width: 70%;
+}
+
+.table-icons {
+    line-height: 3.5rem;
+}
+a.table-icons {
+    display: block;
+    text-decoration: none;
+    /*color: inherit;*/
+}
+.table-icons > img {
+    vertical-align: middle;
+    height: 3rem;
+}
+.table-icons .small {
+    height: 2.75rem;
+}
+.divide-on-small {
+    margin-top: 5rem;
+}
+@media (min-width: 550px) {
+    .divide-on-small {
+        margin-top: 0;
+    }
+}
