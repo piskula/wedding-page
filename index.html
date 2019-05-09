@@ -90,15 +90,15 @@
         <div class="one-third column value">
           <h3 class="places-title">Hostina</h3>
           <h5 class="places-subtitle">Bude aj D.I.S.C.O.?</h5>
-          <p>Pravdaže. Hostina sa bude konať v&nbsp;kaštieli <span class="accent">v&nbsp;Oponiciach pri&nbsp;Nitre</span>, kde sa možno aj skromne a bez&nbsp;alkoholu zabavíme.</p>
-          <a class="button button-primary" onclick="seeButtonClick('chateau')" href="https://www.chateauappony.sk/">Miesto</a>
+          <p>Hostina sa bude konať v&nbsp;kaštieli <span class="accent"><a href="https://www.chateauappony.sk/">v&nbsp;Oponiciach pri&nbsp;Nitre</a></span>. Vašu účasť nám prosím potvrďte prostredníctvom RSVP.</p>
+          <a class="button button-primary" onclick="seeButtonClick('rsvp')" href="https://www.google.com/forms/about/">RSVP</a>
           <a class="button button-primary mb-15" onclick="navigateButtonClick('chateau')" href="https://www.google.com/maps/dir/?api=1&destination=Chateau+Appony&destination_place_id=ChIJMWf0Vz02a0cRoGsJWMrsCtw&travelmode=driving">Trasa</a>
         </div>
 
         <div class="one-third column value">
           <h3 class="places-title">Ubytovanie</h3>
           <h5 class="places-subtitle">Mám kde spať?</h5>
-          <p>Máte kde spať. Ubytovanie sme riešili s&nbsp;každým z&nbsp;Vás individuálne. Ak sa tak nestalo, určite nám dajte vedieť.</p>
+          <p>Na nocľah sú k&nbsp;dispozícii kaštieľ a penzión. Ubytovanie sme riešili s&nbsp;každým z&nbsp;Vás individuálne. Ak sa tak nestalo, určite nám dajte vedieť.</p>
           <a class="button button-primary" onclick="seeButtonClick('penzion')" href="https://penzion-oponice.business.site/">Penzión</a>
         </div>
 
@@ -110,14 +110,67 @@
     <div class="container">
       <div class="row">
 
-        <h3>Chcem Vám niečo kúpit'</h3>
+        <div class="columns five">
+          <h3>Harmonogram</h3>
+
+          <table class="program-table">
+            <tbody>
+            <tr>
+              <td class="program-time">13:00</td><td>Sobáš</td>
+            </tr>
+            <tr>
+              <td class="program-time">14:30</td><td>Odchod do Oponíc</td>
+            </tr>
+            <tr>
+              <td class="program-time">16:30</td><td>Ubytovanie hostí a Welcome drink</td>
+            </tr>
+            <tr>
+              <td class="program-time">17:30</td><td>Gratulácie a fotenie s mladomanželmi</td>
+            </tr>
+            <tr>
+              <td class="program-time">18:30</td><td>Večera a zábava</td>
+            </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="seven columns commands">
+          <h3>Pokyny a prosby</h3>
+
+          <ul>
+            <li>Ak idete na&nbsp;hostinu, prosíme, negratulujte nám po&nbsp;sobáši, ale až potom v&nbsp;kaštieli.</li>
+            <li>Z&nbsp;Bratislavy do&nbsp;Oponíc sa presunieme autami. Ak nemáte odvoz, alebo naopak, ak viete, že budete schopní niekoho zobrať, dajte nám vedieť alebo nechajte odkaz vo&nbsp;formulári RSVP.</li>
+            <li>Tí, ktorí ste ubytovaní v&nbsp;kaštieli, máte raňajky do&nbsp;10:00 a checkout do&nbsp;11:00. Taktiež máte v cene vstup do wellnessu, ktorý je možné využiť aj po 11:00.</li>
+            <li>V&nbsp;kaštieli sa nachádza historická knižnica, ktorú ako hostia na&nbsp;našej svadbe máte možnosť navštíviť v&nbsp;sobotu ráno prostredníctvom skupinovej prehliadky.</li>
+
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="container">
+      <div class="row">
+
+        <h3>Chcem Vás obdarovat'</h3>
         <p>
-          Veľmi si to vážime, ale <span class="accent">nie</span>, neprosíme si. Obaja sme veľmi nároční a najradšej
-          si všetko kupujeme sami. Prosíme, <span class="accent">nenoste nám ani žiadne kvety</span> (ked' tak výhradne s&nbsp;vázou).
-          Môžete nám príst' zablahoželat' aj s&nbsp;prázdnymi rukami, pretože pre&nbsp;nás najkrajší dar je Vaša prítomnost'.
-          Peňažné dary môžete poukázať na&nbsp;číslo účtu <span class="accent nowrap">SK25 1111 0000 0011 3922 1013</span>. Nezabudnite
-          uviesť svoje identifikačné údaje. Tu taktiež nájdete aj náš transparentný <del>predvolebný</del> predsvadobný účet:
+          Nenoste nám, prosím, žiadne kvety. V&nbsp;prípade, že na&nbsp;tom veľmi trváte, stačí jedna biela ruža.
+          Ak nás plánujete obdarovať finančne, môžete tak urobiť aj v&nbsp;prospech účtu <span class="accent nowrap">SK25 1111 0000 0011 3922 1013</span>.
+          Nezabudnite uviesť svoje identifikačné údaje.
+          <!--Tu taktiež nájdete aj náš transparentný <del>predvolebný</del> predsvadobný účet:-->
         </p>
+        <a class="button button-primary" onclick="togglePayBySquare()">Pay by Square</a>
+
+      </div>
+
+      <div class="row">
+        <div class="pay-img-wrapper">
+          <img id="pay-by-square" class="pay-img" src="images/pay-by-square.png">
+        </div>
+      </div>
+        <!--
         <a class="button button-primary" onclick="toggleAccountTable()">Transparentný účet</a>
 
         <div id="account-table" class="account-table-wrapper">
@@ -131,7 +184,6 @@
             </thead>
             <tbody>
 
-            <!--1. line-->
             <tr onclick="toggleAccountRow(this)" class="big-table">
               <td class="text-right">13.4.2019</td>
               <td class="content">Sajfa, Ja som funrádio - malý príspevok na tvoj nový Samsung, aby si po svadbe mala konečne funkčný telefón a mohla pozerať moje vlogy.</td>
@@ -146,7 +198,6 @@
               <td class="content" colspan="3">Sajfa, Ja som funrádio - malý príspevok na tvoj nový Samsung, aby si po svadbe mala konečne funkčný telefón a mohla pozerať moje vlogy.</td>
             </tr>
 
-            <!--2. line-->
             <tr onclick="toggleAccountRow(this)" class="big-table">
               <td class="text-right">11.4.2019</td>
               <td class="content">Ondrej Oravčok - vrátenie svadobného daru.</td>
@@ -161,7 +212,6 @@
               <td class="content" colspan="3">Ondrej Oravčok - vrátenie svadobného daru.</td>
             </tr>
 
-            <!--3. line-->
             <tr onclick="toggleAccountRow(this)" class="big-table">
               <td class="text-right">10.4.2019</td>
               <td class="content">&hearts; Charles Leclerc, Ferrari - Wish you all the best Debora. Hope I will see you <del>both</del> back in Monaco! &hearts;</td>
@@ -176,7 +226,6 @@
               <td class="content" colspan="3">&hearts; Charles Leclerc, Ferrari - Wish you all the best Debora. Hope I will see you <del>both</del> back in Monaco! &hearts;</td>
             </tr>
 
-            <!--4. line-->
             <tr onclick="toggleAccountRow(this)" class="big-table">
               <td class="text-right">7.4.2019</td>
               <td class="content">Ondrej Oravčok - skúška svadobného účesu</td>
@@ -191,7 +240,6 @@
               <td class="content" colspan="3">Ondrej Oravčok - skúška svadobného účesu</td>
             </tr>
 
-            <!--5. line-->
             <tr onclick="toggleAccountRow(this)" class="big-table">
               <td class="text-right">22.3.2019</td>
               <td class="content">Popolnočný tajný host' pre Deboru od Ondra: Michal David zaspieva naživo Céčka</td>
@@ -206,7 +254,6 @@
               <td class="content" colspan="3">Popolnočný tajný host' pre Deboru od Ondra: Michal David zaspieva naživo Céčka</td>
             </tr>
 
-            <!--6. line-->
             <tr onclick="toggleAccountRow(this)" class="big-table">
               <td class="text-right">8.3.2019</td>
               <td class="content">Brano Mojsej - niečo z&nbsp;Pereša pre Ondríka. Nech sa Vám darí, Váš Branko</td>
@@ -221,7 +268,6 @@
               <td class="content" colspan="3">Brano Mojsej - niečo z&nbsp;Pereša pre Ondríka. Nech sa Vám darí, Váš Branko</td>
             </tr>
 
-            <!--7.line-->
             <tr onclick="toggleAccountRow(this)" class="big-table">
               <td class="text-right">10.2.2019</td>
               <td class="content">Debora Trebulová - vrecúška AliExpres</td>
@@ -236,7 +282,6 @@
               <td class="content" colspan="3">Debora Trebulová - vrecúška AliExpres</td>
             </tr>
 
-            <!--8.line-->
             <tr onclick="toggleAccountRow(this)" class="big-table">
               <td class="text-right">21.12.2018</td>
               <td class="content">Ondrej Oravčok - vklad: všetky moje životné úspory</td>
@@ -254,9 +299,10 @@
             </tbody>
           </table>
         </div>
+      </div>
+      -->
 
       </div>
-    </div>
   </div>
 
   <div class="section">
@@ -265,7 +311,6 @@
       <div class="row">
         <h3>Chcem Vás kontaktovat'</h3>
         <p>Neváhajte nás kontaktovat', ak máte akékoľvek otázky, užitočné oznamy, špeciálne prosby a pod.
-          Naši operátori sú tu pre Vás, prvý voľný sa Vám bude venovať.
         </p>
       </div>
 
@@ -445,6 +490,7 @@
   <script type="text/javascript">
     const POPUP = document.getElementById('cookie-popup');
     const ACCOUNT_TABLE = document.getElementById('account-table');
+    const PAY_BY_SQUARE = document.getElementById('pay-by-square');
 
     checkHeightOfCookiePopup = function () {
         return POPUP.offsetHeight + "px";
@@ -470,6 +516,19 @@
             POPUP.style.display = "none";
         }, 2000);
       ga('send', 'event', "cookies", action);
+    };
+
+    let togglePayBySquareCount = 0;
+    togglePayBySquare = function() {
+      if (!PAY_BY_SQUARE.style.height) {
+        PAY_BY_SQUARE.style.height = "27rem";
+      } else {
+        PAY_BY_SQUARE.style.height = "";
+      }
+      if (!togglePayBySquareCount) {
+        togglePayBySquareCount++;
+        ga('send', 'event', "transparent-account", 'pay-by-square');
+      }
     };
 
     let toggles = 0;
