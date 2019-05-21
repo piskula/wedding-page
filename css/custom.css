@@ -393,6 +393,12 @@ th, td {
 .flip-box-front,
 .flip-box-back {
     backface-visibility: hidden;
+    /* iOS support: (backface-visibility) */
+    color: white;
+    -webkit-perspective: 0;
+    -webkit-backface-visibility: hidden;
+    -webkit-transform: translate3d(0,0,0);
+    visibility:visible;
 }
 .flip-box-front {
     padding: .75rem;
