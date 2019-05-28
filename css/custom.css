@@ -380,12 +380,6 @@ th, td {
     transform-style: preserve-3d;
 }
 
-@media (hover: hover) {
-    .flip-box:hover .flip-box-inner {
-        transform: rotateY(180deg);
-    }
-}
-
 .flip-box.hover .flip-box-inner {
     transform: rotateY(180deg);
 }
@@ -397,8 +391,8 @@ th, td {
     color: white;
     -webkit-perspective: 0;
     -webkit-backface-visibility: hidden;
-    -webkit-transform: translate3d(0,0,0);
-    visibility:visible;
+    -webkit-transform: translate3d(0, 0, 0);
+    visibility: visible;
 }
 .flip-box-front {
     padding: .75rem;
